@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/favicon.webp" type="">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive/grid.css">
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav
+        class="navbar navbar-expand-lg bg-white border-bottom border-secondary p-0"
+      >
+        <nav class="container">
+          <div class="container-fluid d-flex">
+            <div class="header__logo">
+              <a href="/" class="header__logo-link">
+                <img
+                  class="header__logo-img"
+                  alt="Bad Habits Official Store"
+                  src="./assets/img/logo.webp"
+                />
+              </a>
+            </div>
+            <div
+              class="collapse navbar-collapse d-flex justify-content-between"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-evenly"
+              >
+                <form class="search d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Tìm kiếm"
+                    aria-label="Search"
+                  />
+                </form>
+                <ul class="mucluc p-0">
+                  <li class="nav-item px-2">
+                    <a class="nav-link text-body" href="#"
+                      ><i class="fa-regular fa-circle-question"> </i
+                    ></a>
+                  </li>
+                  <li class="nav-item px-2 dropdown">
+                    <a
+                      class="nav-link text-body"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="fa-regular fa-address-card"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item d-flex justify-content-evenly"
+                          href="https://www.facebook.com/badhabitsstore"
+                          >facebook<i class="fa-brands fa-facebook mt-1"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item d-flex justify-content-evenly"
+                          href="https://www.instagram.com/badhabitsstore.vn/"
+                          >intagram<i class="fa-brands fa-instagram mt-1"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item d-flex justify-content-evenly"
+                          href="tel:0368272331"
+                          >telephone<i class="fa-solid fa-phone mt-1"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a
+                      class="nav-link text-body"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      href="#"
+                    >
+                      <i class="fa-regular fa-bell"></i>
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Thông Báo
+                                <i class="fa-regular fa-bell"></i>
+                              </h5>
+                            </div>
+                            <div class="modal-body">
+                              <a class="notice py-1 text-body d-block" href="#"
+                                >+ thông báo 1</a
+                              >
+                              <a class="notice py-1 text-body d-block" href="#"
+                                >+ thông báo 1</a
+                              >
+                              <a class="notice py-1 text-body d-block" href="#"
+                                >+ thông báo 1</a
+                              >
+                              <a class="notice py-1 text-body d-block" href="#"
+                                >+ thông báo 1</a
+                              >
+                            </div>
+                            <div class="modal-footer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a
+                      class="nav-link active text-body"
+                      aria-current="page"
+                      href="./login.html"
+                      ><i class="fa-regular fa-user"> </i
+                    ></a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </nav>
+    </header>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="collection-item">
+          <ul class="sidebar">
+            <li class="sidebar-menu">
+              <a href="./list.html" class="collection-item--text">SẢN PHẨM MỚI</a>
+            </li>
+            <li class="sidebar-menu">
+              <a href="./list.html" class="collection-item--text">ÁO</a>
+            </li>
+            <li class="sidebar-menu">
+              <a href="./list.html" class="collection-item--text">QUẦN</a>
+            </li>
+            <li class="sidebar-menu">
+              <a href="./list.html" class="collection-item--text">SỰ KIỆN</a>
+            </li>
+            <li class="sidebar-menu">
+              <a href="" class="collection-item--text">BỘ SƯU TẬP</a>
+            </li>
+            <li class="sidebar-menu">
+              <a href="./list.html" class="collection-item--text">BAD HABITS® OUTFIT</a>
+            </li>
+            <li class="sidebar-menu">
+              <a href="" class="collection-item--text">CÂU CHUYỆN</a>
+            </li>
+          </ul>
+        </div>
+        <div class="carousel-item active">
+          <img
+            src="./assets/img/bn_chinh_0a2b804aaede4ac3baac9fbdd82c7230.webp"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <section class="section section-barcode">
+    <div class="container">
+      <div class="welcome text-center pt-5">
+        <img
+          src="./assets/img/barcode_527fda141cd94b2cbcb259d890efcd88.webp"
+          alt=""
+        />
+        <div class="animation-two">
+          <i class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 490.677 490.677" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><g><path d="M489.272,37.339c-1.92-3.307-5.44-5.333-9.259-5.333H10.68c-3.819,0-7.339,2.027-9.259,5.333    c-1.899,3.307-1.899,7.36,0.021,10.667l234.667,405.333c1.899,3.307,5.419,5.333,9.237,5.333s7.339-2.027,9.237-5.333    L489.251,48.005C491.149,44.72,491.149,40.645,489.272,37.339z" fill="#000000" data-original="#000000" class=""></path></g></g></g></svg>
+          </i>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="section section-bg-scroll one">
+    <div
+      id="carouselExampleDark"
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+    >
+      <div class="grid my-5 ">
+        <div class="list-banner1 ">
+          <div class="list--lefl-2 ">
+            <div class="list-banner__right">
+              <a class="accessory" href="./list.html">
+                <span class="accessory-text">PHỤ KIỆN</span>
+                <img
+                  class="list-banner__img"
+                  src="./assets/img/mũ.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="list-banner__right">
+            <a class="accessory" href="./list.html">
+              <span class="accessory-text">QUẦN</span>
+                <img
+                  class="list-banner__img"
+                  src="./assets/img/n_12_clc_f5108677ba9d490393c079d2fd71b3b0.webp"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="list-banner__right ps-5 py-2">
+            <a class="accessory" href="./list.html">
+              <span class="accessory-text">SẢN PHẨM MỚI</span>
+              <img
+                class="list-banner__img"
+                src="./assets/img/sanphammoi.webp"
+                alt=""
+              />
+            <a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <div class="container">
+      <div class="list-banner">
+        <div class="row">
+          <div class="xyz col-12 col-sm-6 col-lg-6 col-xl-6 text-end">
+            <div class="banner">
+              <a href="./list.html" class="accessory">
+                <img
+                  class="image--fade-in ls-is-cached lazyloaded"
+                  data-src="https://file.hstatic.net/1000351433/file/nhom_2___9__d71f9f5c3a7146b4b3f199d3e30fa883.png"
+                  alt="OUTERWEAR"
+                  src="https://file.hstatic.net/1000351433/file/nhom_2___9__d71f9f5c3a7146b4b3f199d3e30fa883.png"
+                />
+                <div class="accessory-text">
+                  <p>ÁO KHOÁC</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="xyz col-12 col-sm-6 col-lg-6 col-xl-6 text-start">
+            <div class="banner">
+              <a href="" class="accessory">
+                <img
+                  class="image--fade-in ls-is-cached lazyloaded"
+                  data-src="https://file.hstatic.net/1000351433/file/nhom_2___1__346c72b2be6d41e2802073a675822834.png"
+                  alt="#STEPOUT STORY"
+                  src="https://file.hstatic.net/1000351433/file/nhom_2___1__346c72b2be6d41e2802073a675822834.png"
+                />
+                <div class="accessory-text">
+                  <p>THÔNG ĐIỆP #STEPOUT</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="xyz col-12 col-sm-6 col-lg-6 col-xl-6 text-end">
+            <div class="banner">
+              <a href="" class="accessory">
+                <img
+                  class="image--fade-in ls-is-cached lazyloaded"
+                  data-src="https://file.hstatic.net/1000351433/file/nhom_2___2__3487c7fd160d4dc0917130c60f3531d0.png"
+                  alt="#STEPOUT COLLECTION"
+                  src="https://file.hstatic.net/1000351433/file/nhom_2___2__3487c7fd160d4dc0917130c60f3531d0.png"
+                />
+                <div class="accessory-text">
+                  <p>BỘ SƯU TẬP #STEPOUT</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="xyz col-12 col-sm-6 col-lg-6 col-xl-6 text-start">
+            <div class="banner">
+              <a href="./list.html" class="accessory">
+                <img
+                  class="image--fade-in ls-is-cached lazyloaded"
+                  data-src="https://file.hstatic.net/1000351433/file/nhom_2___3__3b3c70246d8b45ffa7df589420a308f3.png"
+                  alt="TOPS"
+                  src="https://file.hstatic.net/1000351433/file/nhom_2___3__3b3c70246d8b45ffa7df589420a308f3.png"
+                />
+                <div class="accessory-text">
+                  <p>ÁO</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <section class="section section-collection">
+        <div class="container pt-5">
+          <div class="s-title pb-5">
+            <h2>
+              <a href="">Bộ sưu tập #StepOut</a>
+              <div class="animation-three">
+              <i class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 490.677 490.677" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><g><path d="M489.272,37.339c-1.92-3.307-5.44-5.333-9.259-5.333H10.68c-3.819,0-7.339,2.027-9.259,5.333    c-1.899,3.307-1.899,7.36,0.021,10.667l234.667,405.333c1.899,3.307,5.419,5.333,9.237,5.333s7.339-2.027,9.237-5.333    L489.251,48.005C491.149,44.72,491.149,40.645,489.272,37.339z" fill="#000000" data-original="#000000" class=""></path></g></g></g></svg>
+              </i>
+            </div>
+            </h2>
+          </div>
+          <div class="row">
+          <div id="ppp" class="s-content p-0">
+            <div  class="swiper-container ">
+              <a href="" class="swiper-container--image"><img src="./assets/img/bosutap/ruong_bac_thang_37e74b0fd65f4a24ae304ca46b014c60_grande.webp" alt=""></a>
+              <div class="swiper-container--image1">
+              <a href="" class=""><img class="swiper-container--image-src" src="./assets/img/bosutap/ruong_bt_1_d2deae7bf79f459ea634638e898ab775_grande.webp" alt="">
+                <a href="" class="swiper-container--image-text"><span class="swiper-container--image-text__1">CHI TIẾT</span></a></a>
+              </div>
+              <div class="product-loop__detail">
+                <div class="swiper-container--text text-center">
+                  <a href=""><span>
+                    RONG CHƠI: RUỘNG BẬC THANG TEE
+                  </span></a>
+                <div class="price">
+                  <a href=""><span>400 000 VND</span></a>           
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-tee">
+        <div class="">
+          <a href="" class=" text-center">
+            <img
+              src="./assets/img/z3600151734415_889780b95b994888a44084aba0f0240a_7603db6132634096816d9175f6e1c7f9.webp"
+              alt=""
+            />
+          </a>
+        </div>
+      </section>
+      <div class="fooer-top">
+        <div class="container text-center my-3">
+          <h2>
+            "BAD HABITS RETAIL STORE"
+          </h2>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row pt-5">
+            <div class="col-lg-2 order-lg-3">
+              <div class="footer-block fooer-dropdown">
+                <div class="footer-title">
+                  <ul class="footer-menu p-0">
+                    <li>
+                      <a href="/search" title="TÌM SẢN PHẨM">TÌM SẢN PHẨM</a>
+                    </li>
+                    <li>
+                      <a href="" title="BLOG">BLOG</a>
+                    </li>
+                    <li>
+                      <a href="" title="ĐỔI TRẢ SẢN PHẨM">ĐỔI TRẢ SẢN PHẨM</a>
+                    </li>
+                    <li>
+                      <a href="" title="CHÍNH SÁCH ĐỔI TRẢ">CHÍNH SÁCH ĐỔI TRẢ</a>
+                      <li>
+                        <a href="" title="THÔNG TIN SẢN PHẨM">THÔNG TIN SẢN PHẨM</a>
+                      </li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 order-lg-1">
+              <div class="footer-block">
+                <div class="footer-title">
+                  <b><p>THEO DÕI BAD HABITS® TẠI:</p></b>
+                </div>
+                <div class="footer-content">
+                  <ul class="social-list p-0">
+                    <li class="item fade-box">
+                      <a href=""><i class=" fa-brands fa-instagram"></i></a>
+                      <a href=""><i class="px-3 fa-brands fa-facebook"></i></a>
+                      <a href=""><i class="pe-3 fa-brands fa-tiktok"></i></a>
+                      <a href=""><i class=" fa-brands fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                  <div class="input-group1">
+                    <b><p class="group-text">ĐĂNG KÍ ĐỂ NHẬN NHIỀU ƯU ĐÃI</p></b>
+                    <input type="text" placeholder="Email">
+                    <button type="submit" class="button dark">Đăng kí</button>
+                  </div>
+                  <div class="hotline pt-3 ps-3">
+                    <b>
+                      "HOTLINE"
+                      <a href="tel:0902638020">0902.638.020</a>
+                      " - "
+                      <a href="tel:0931610291">0931.610.291</a>
+                    </b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-2">
+              <div class="footer-block">
+                <div class="footer-title">
+                  <h4>CHI NHÁNH CỬA HÀNG:</h4>
+                </div>
+                <div class="footer-content">
+                  <ul class="address-list">
+                    <li>SÀI GÒN
+                    </li>
+                    <li>1. 93 Rạch Bùng Binh,Phường 9, Quận 3</li>
+                    <li>2. 117 Trần Đình Xu, phường Nguyễn Cư Trinh, Quận 1</li>
+                    <li>3. 57 Nguyễn Gia Trí phường 25, quận Bình Thạnh</li>
+                    <li>4. 26 Lý Tự Trọng, Phường Bến Nghé, Quận 1</li>
+                    <li>HÀ NỘI
+                    </li>
+                    <li>5. 21B Phố Lò Đúc, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng, Hà Nội</li>
+                    <li>CẦN THƠ
+                    </li>
+                    <li>6. 7 Trần Văn Hoài, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
+                  </ul>
+                  <p class="copyright ps-4">
+                    © 2022 
+                    <a href="https://badhabitsstore.vn"> Bad Habits Official Store</a>
+                    all right reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <script src="index.js"> </script>
+  </body>
+</html>
